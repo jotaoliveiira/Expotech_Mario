@@ -1,0 +1,272 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Mario - Minha Casa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="topo">
+        <div class="logo">🍄 MUNDO DO MARIO</div>
+        <p>Crie seu personagem e coloque ele na sua casa!</p>
+    </header>
+
+    <main class="container">
+
+        <section class="painel criacao">
+            <div class="titulo-secao">
+                <div>
+                    <span class="etiqueta">PERSONALIZAÇÃO</span>
+                    <h1>Crie seu Mario!</h1>
+                    <p>Escolha as cores e dê um nome ao seu personagem.</p>
+                </div>
+                <span class="icone-cogumelo">🍄</span>
+            </div>
+
+            <div class="area-criacao">
+                <div class="area-personagem">
+                    <div class="personagem-fundo">
+                        <div class="mario" id="mario">
+                            <svg viewBox="0 0 180 220" class="mario-svg"
+                                 xmlns="http://www.w3.org/2000/svg"
+                                 aria-label="Personagem Mario">
+
+                                <!-- Boné -->
+                                <rect x="48" y="13" width="82" height="15" rx="5" fill="var(--bone)"/>
+                                <rect x="35" y="27" width="108" height="17" rx="5" fill="var(--bone)"/>
+                                <rect x="27" y="40" width="126" height="13" rx="4" fill="var(--bone)"/>
+                                <rect x="70" y="19" width="36" height="22" rx="10" fill="#fff"/>
+                                <text x="88" y="35" text-anchor="middle" font-size="17"
+                                      font-weight="bold" fill="var(--bone)">M</text>
+
+                                <!-- Rosto -->
+                                <rect x="48" y="53" width="84" height="53" rx="12" fill="var(--skin)"/>
+                                <rect x="42" y="67" width="12" height="28" fill="var(--skin)"/>
+                                <rect x="126" y="67" width="12" height="28" fill="var(--skin)"/>
+
+                                <!-- Cabelo e costeletas -->
+                                <rect x="43" y="54" width="13" height="35" fill="#63351f"/>
+                                <rect x="124" y="54" width="13" height="35" fill="#63351f"/>
+                                <rect x="53" y="94" width="74" height="13" fill="#63351f"/>
+
+                                <!-- Olhos -->
+                                <ellipse cx="72" cy="72" rx="7" ry="12" fill="#fff"/>
+                                <ellipse cx="108" cy="72" rx="7" ry="12" fill="#fff"/>
+                                <ellipse cx="74" cy="74" rx="3" ry="7" fill="#222"/>
+                                <ellipse cx="106" cy="74" rx="3" ry="7" fill="#222"/>
+
+                                <!-- Nariz -->
+                                <ellipse cx="90" cy="87" rx="15" ry="11" fill="#e9a477"/>
+
+                                <!-- Bigode -->
+                                <path d="M49 91 Q58 81 72 89 Q82 82 90 91
+                                         Q99 82 108 89 Q123 81 131 91
+                                         Q126 108 109 103 Q99 99 90 104
+                                         Q80 99 70 103 Q54 108 49 91Z"
+                                      fill="#4b281c"/>
+
+                                <!-- Camisa -->
+                                <rect x="48" y="108" width="84" height="43" rx="12"
+                                      fill="var(--shirt)"/>
+                                <rect x="35" y="116" width="20" height="38" rx="9"
+                                      fill="var(--shirt)"/>
+                                <rect x="125" y="116" width="20" height="38" rx="9"
+                                      fill="var(--shirt)"/>
+
+                                <!-- Macacão -->
+                                <path d="M48 139 Q90 128 132 139 L127 190
+                                         Q90 205 53 190Z" fill="var(--overall)"/>
+                                <rect x="55" y="127" width="23" height="37" rx="7"
+                                      fill="var(--overall)"/>
+                                <rect x="102" y="127" width="23" height="37" rx="7"
+                                      fill="var(--overall)"/>
+                                <rect x="57" y="139" width="66" height="10" rx="4"
+                                      fill="var(--overall)"/>
+
+                                <!-- Botões -->
+                                <circle cx="67" cy="145" r="5" fill="#ffd84d"/>
+                                <circle cx="113" cy="145" r="5" fill="#ffd84d"/>
+
+                                <!-- Mãos -->
+                                <circle cx="43" cy="155" r="11" fill="#fff"/>
+                                <circle cx="137" cy="155" r="11" fill="#fff"/>
+
+                                <!-- Pernas -->
+                                <rect x="59" y="185" width="25" height="17" fill="#252525"/>
+                                <rect x="96" y="185" width="25" height="17" fill="#252525"/>
+
+                                <!-- Sapatos -->
+                                <path d="M48 199 Q48 190 62 193 L83 198
+                                         Q88 205 81 211 L49 211 Q40 207 48 199Z"
+                                      fill="#6b351e"/>
+                                <path d="M96 198 L117 193 Q132 190 132 199
+                                         Q140 207 130 211 L99 211 Q91 205 96 198Z"
+                                      fill="#6b351e"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="legenda-personagem">
+                        <span class="bolinha-verde"></span>
+                        Seu personagem está pronto!
+                    </div>
+                </div>
+
+                <div class="controles">
+                    <label for="playerName">Nome do personagem</label>
+                    <input type="text" id="playerName"
+                           placeholder="Ex: Super Mario" maxlength="20">
+
+                    <h3>Escolha as cores</h3>
+
+                    <div class="cores">
+                        <div class="cor-item">
+                            <label for="boneColor">Boné</label>
+                            <input type="color" id="boneColor" value="#e52521">
+                        </div>
+                        <div class="cor-item">
+                            <label for="shirtColor">Camisa</label>
+                            <input type="color" id="shirtColor" value="#e52521">
+                        </div>
+                        <div class="cor-item">
+                            <label for="overallColor">Macacão</label>
+                            <input type="color" id="overallColor" value="#1769d2">
+                        </div>
+                        <div class="cor-item">
+                            <label for="skinColor">Pele</label>
+                            <input type="color" id="skinColor" value="#f2b27b">
+                        </div>
+                    </div>
+
+                    <div class="botoes">
+                        <button class="botao botao-sortear" id="sortearBtn">
+                            🎲 Sortear cores
+                        </button>
+                        <button class="botao botao-resetar" id="resetarBtn">
+                            ↺ Restaurar
+                        </button>
+                        <button class="botao botao-casa" id="colocarBtn">
+                            🏠 Colocar na minha casa
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="painel reino" id="reino" hidden>
+            <div class="titulo-secao titulo-casa">
+                <div>
+                    <span class="etiqueta">MEU LAR</span>
+                    <h2>🏡 Minha Casa</h2>
+                    <p>Um lugar para descansar depois da aventura!</p>
+                </div>
+                <span class="icone-casa">🏠</span>
+            </div>
+
+            <div class="sala">
+
+                <div class="parede-casa"></div>
+
+                <div class="janela-area">
+                    <div class="cortina cortina-esquerda"></div>
+                    <div class="cortina cortina-direita"></div>
+                    <div class="janela-casa">
+                        <div class="paisagem">
+                            <div class="sol-casa"></div>
+                            <div class="nuvem-casa"></div>
+                            <div class="colina colina1"></div>
+                            <div class="colina colina2"></div>
+                        </div>
+                        <div class="divisoria-janela vertical"></div>
+                        <div class="divisoria-janela horizontal"></div>
+                    </div>
+                </div>
+
+                <div class="quadro quadro1">
+                    <span>♡</span>
+                    <small>HOME</small>
+                </div>
+                <div class="quadro quadro2">🍄</div>
+
+                <div class="porta-area">
+                    <div class="porta-casa">
+                        <div class="detalhe-porta"></div>
+                        <div class="macaneta"></div>
+                    </div>
+                </div>
+
+                <div class="luminaria">
+                    <div class="luz"></div>
+                    <div class="haste"></div>
+                    <div class="base-luminaria"></div>
+                </div>
+
+                <div class="sofa">
+                    <div class="encosto"></div>
+                    <div class="braco braco-esquerdo"></div>
+                    <div class="braco braco-direito"></div>
+                    <div class="assento"></div>
+                    <div class="almofada almofada1"></div>
+                    <div class="almofada almofada2"></div>
+                    <div class="pe pe1"></div>
+                    <div class="pe pe2"></div>
+                </div>
+
+                <div class="televisao">
+                    <div class="tela-tv">
+                        <span>🍄</span>
+                    </div>
+                    <div class="led-tv"></div>
+                </div>
+
+                <div class="rack">
+                    <div class="gaveta"></div>
+                    <div class="gaveta"></div>
+                    <div class="prateleira"></div>
+                </div>
+
+                <div class="planta">
+                    <div class="folha folha1"></div>
+                    <div class="folha folha2"></div>
+                    <div class="folha folha3"></div>
+                    <div class="folha folha4"></div>
+                    <div class="folha folha5"></div>
+                    <div class="vaso"></div>
+                </div>
+
+                <div class="tapete">
+                    <div class="tapete-interno"></div>
+                </div>
+
+                <div class="mesa">
+                    <div class="objeto-mesa">☕</div>
+                    <div class="tampo-mesa"></div>
+                    <div class="perna-mesa perna1"></div>
+                    <div class="perna-mesa perna2"></div>
+                </div>
+
+                <div class="mario-na-sala">
+                    <div id="marioNoReino"></div>
+                    <h3 id="nomeNoReino">Meu personagem</h3>
+                </div>
+
+                <div class="piso">
+                    <div class="rodape"></div>
+                    <div class="linha-piso linha1"></div>
+                    <div class="linha-piso linha2"></div>
+                    <div class="linha-piso linha3"></div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>🍄 Projeto de personalização de personagem e ambiente residencial</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
